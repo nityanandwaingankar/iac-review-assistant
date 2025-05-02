@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A simple S3 bucket and EC2 instance setup
+
+Resources:
+  MyBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: my-insecure-bucket
+      AccessControl: PublicRead  # ❌ Security Issue: Public read access
+      VersioningConfiguration:   # ✅ Good practice
+        Status: Enabled
+
+  MyInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0abcdef1234567890
+      KeyName: my-key-pair
+      SecurityGroups:            # ❌ Deprecated: use SecurityGroupIds for VPC
+        - default
+      Tags:
+        - Key: Name
+          Value: MyInstance
+
+  MySecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow SSH
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0       # ❌ Security Issue: open SSH access to the world
