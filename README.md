@@ -1,2 +1,2 @@
 # iac-review-assistant
-IaC Code Review Assistant using Ollama and Python
+Infrastructure as Code Review Assistant using Ollama and Python
