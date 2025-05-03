@@ -16,7 +16,6 @@ Powered by local LLMs using **Ollama** (supports `llama3`, `mistral`, `codellama
 
 ## 📁 Project Structure
 
-```
 
 iac-review-assistant/
 ├── main.py            # Entry point
@@ -27,7 +26,7 @@ iac-review-assistant/
 └── output/
 └── reviewed\_sample.tf  # Output with inline comments
 
-````
+
 
 ---
 
@@ -60,7 +59,7 @@ iac-review-assistant/
 2. **Pull a model (e.g., Code LLaMA):**
    ```bash
    ollama pull codellama
-````
+#````
 
 3. **Clone and run:**
 
@@ -68,7 +67,7 @@ iac-review-assistant/
    git clone https://github.com/your-username/iac-review-assistant.git
    cd iac-review-assistant
    python main.py
-   ```
+   #```
 
 4. **Edit `test_data/sample.tf`** or use your own IaC file.
 
