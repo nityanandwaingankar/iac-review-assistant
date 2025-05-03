@@ -21,10 +21,10 @@ iac-review-assistant/
 ├── main.py            # Entry point
 ├── reviewer.py        # Ollama logic
 ├── prompts.py         # Prompt templates
-├── test\_data/
+├── test_data/
 │   └── sample.tf      # Sample Terraform file
 └── output/
-└── reviewed\_sample.tf  # Output with inline comments
+    └── reviewed_spl.tf # Output with inline comments
 
 ```
 
