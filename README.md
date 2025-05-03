@@ -1,5 +1,5 @@
 
-#```markdown
+
 # 🛠️ IaC Review Assistant
 
 **Infrastructure as Code Review Assistant using Ollama and Python**
@@ -13,7 +13,7 @@ A CLI-based tool that reviews Infrastructure-as-Code (IaC) files like **Terrafor
 Powered by local LLMs using **Ollama** (supports `llama3`, `mistral`, `codellama`, etc.).
 
 ---
-
+```markdown
 ## 📁 Project Structure
 
 
@@ -26,9 +26,8 @@ iac-review-assistant/
 └── output/
 └── reviewed\_sample.tf  # Output with inline comments
 
+```
 
-
----
 
 ## 🎯 Project Goals
 
@@ -59,7 +58,6 @@ iac-review-assistant/
 2. **Pull a model (e.g., Code LLaMA):**
    ```bash
    ollama pull codellama
-#````
 
 3. **Clone and run:**
 
@@ -99,5 +97,5 @@ Contributions are welcome! Feel free to open issues or PRs.
 
 This project combines DevOps, security best practices, and AI to help engineers catch issues early in their infrastructure code using **local LLMs**.
 
-#```
+
 
